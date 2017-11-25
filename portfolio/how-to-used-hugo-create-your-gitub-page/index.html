@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>使用Hugo打造Github Page 博客</title>
+<meta name="description" content="blog">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="all,follow">
+<meta name="googlebot" content="index,follow,snippet,archive">
+<link rel="stylesheet" href="https://chongxx.github.io/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,300,700,400italic">
+<link rel="stylesheet" href="https://chongxx.github.io/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://chongxx.github.io/css/owl.carousel.css">
+<link rel="stylesheet" href="https://chongxx.github.io/css/owl.theme.css">
+
+
+  <link href="https://chongxx.github.io/css/style.blue.css" rel="stylesheet" id="theme-stylesheet">
+
+ 
+
+  
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+
+
+<link href="https://chongxx.github.io/css/custom.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://chongxx.github.io/img/favicon.png">
+
+
+</head>
+<body>
+  <div id="all">
+      <div class="container-fluid">
+          <div class="row row-offcanvas row-offcanvas-left">
+              <div id="sidebar" class="col-xs-6 col-sm-4 col-md-3 sidebar-offcanvas">
+  <div class="sidebar-content">
+    <h1 class="sidebar-heading"><a href="https://chongxx.github.io/">Chong&#39;s blog</a></h1>
+    
+      <p class="sidebar-p">Hello, I'm Chong~</p>
+    
+    <ul class="sidebar-menu">
+      
+      
+        <li><a href="https://chongxx.github.io/">Home</a></li>
+      
+        <li><a href="https://chongxx.github.io/about/">About</a></li>
+      
+        <li><a href="https://chongxx.github.io/contact/">Get in touch</a></li>
+      
+    </ul>
+    <p class="social">
+  
+  
+  
+  
+  
+  <a href="mailto:choongzhaoo@foxmail.com" data-animate-hover="pulse" class="email">
+    <i class="fa fa-envelope"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://github.com/chongxx" data-animate-hover="pulse">
+    <i class="fa fa-github"></i>
+  </a>
+  
+</p>
+
+
+    <div class="copyright">
+      <p class="credit">
+        
+          &copy;2017 ❤
+        
+        | Template by <a href="https://bootstrapious.com/free-templates" class="external">Bootstrapious.com</a>
+
+&amp; ported to Hugo by <a href="https://github.com/kishaningithub">Kishan B</a>
+
+      </p>
+    </div>
+  </div>
+</div>
+
+              
+<div class="col-xs-12 col-sm-8 col-md-9 content-column white-background">
+  <div class="small-navbar visible-xs">
+  <button type="button" data-toggle="offcanvas" class="btn btn-ghost pull-left"> <i class="fa fa-align-left"> </i>Menu</button>
+  <h1 class="small-navbar-heading"><a href="https://chongxx.github.io/">Chong&#39;s blog</a></h1>
+</div>
+
+  <div class="row">
+    <div class="col-lg-8">
+      <div class="content-column-content">
+         <h1>使用Hugo打造Github Page 博客</h1>
+         <p><strong>Time：2017-11-25</strong></p>
+
+<p><strong>这篇blog介绍一下如何使用<a href="https://gohugo.io/">hugo</a>在github page上创建个人博客</strong></p>
+
+<p></p>
+
+<h3 id="创建github-page">创建Github Page</h3>
+
+<hr />
+
+<h5 id="1-第一步你需要先有一个github账">1、第一步你需要先有一个github账</h5>
+
+<h5 id="2-在你的github上创建一个仓库名为-username-github-io-的空代码仓库">2、在你的github上创建一个仓库名为<strong>&lt;username&gt;.github.io</strong>的空代码仓库</h5>
+
+<h5 id="3-克隆这刚刚创建的项目到本地-请把username换成你的github-username">3、克隆这刚刚创建的项目到本地，请把username换成你的github username</h5>
+
+<pre><code class="language-console">$ git clone https://github.com/username/username.github.io.git
+</code></pre>
+
+<h5 id="4-在项目的根部创建一个-index-html-文件-这个文件将作为你github-page的首页">4、在项目的根部创建一个<code>index.html</code>文件，这个文件将作为你github page的首页</h5>
+
+<pre><code class="language-console">$ echo 'hello world' &gt; index.html
+</code></pre>
+
+<h5 id="5-push代码到github">5、push代码到github</h5>
+
+<pre><code class="language-console">$ git add .
+$ git commit -m &quot;Initial commit&quot;
+$ git push -u origin master
+</code></pre>
+
+<h5 id="到这一步其实你的github-page就已经上线-快的话现在浏览器打开-username-github-io-就可以看到刚刚提交的页面了-如下-也有可能是404需要等1-15分钟才能看到">到这一步其实你的github page就已经上线，快的话现在浏览器打开<strong>&lt;username&gt;.github.io</strong>就可以看到刚刚提交的页面了,如下：（也有可能是404需要等1~15分钟才能看到）</h5>
+
+<p><img src="http://oxp6uindp.bkt.clouddn.com/blog/blog171125-1.png" style="width: 100%;"/></p>
+
+<h3 id="使用hugo来完善github-page">使用Hugo来完善Github Page</h3>
+
+<hr />
+
+<blockquote>
+<p>但这样实在是太简陋了，接下我们使用hugo来丰富一下这个blog</p>
+</blockquote>
+
+<h5 id="1-直接下载hugo编译好的二进制文件到本地解压后把hugo放到环境变量中-https-github-com-gohugoio-hugo-releases-https-github-com-gohugoio-hugo-releases-我认为这是最快的方法-当然你也可以按照-hugo-https-gohugo-io-getting-started-quick-start-的quick-start来安装">1、直接下载hugo编译好的二进制文件到本地解压后把hugo放到环境变量中 <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a>（我认为这是最快的方法，当然你也可以按照<a href="https://gohugo.io/getting-started/quick-start/">hugo</a> 的Quick Start来安装</h5>
+
+<h5 id="2-hugo已经安装好了-这时候我们可以使用hugo来生成一个静态网站">2、hugo已经安装好了，这时候我们可以使用hugo来生成一个静态网站</h5>
+
+<pre><code class="language-console">$ hugo new site blog
+</code></pre>
+
+<h5 id="3-去-https-themes-gohugo-io-https-themes-gohugo-io-挑选一个你喜欢的网站主题吧">3、去<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>挑选一个你喜欢的网站主题吧</h5>
+
+<p>如果你想快点看到效果，也可以使用目前我使用的这个网站主题，进入到第2步创建的hugo项目中</p>
+
+<pre><code class="language-console">$ mkdir themes
+$ cd themes
+$ git clone --depth=1 https://github.com/kishaningithub/hugo-creative-portfolio-theme.git
+$ rm -rf hugo-creative-portfolio-theme/.git
+$ cp -r hugo-creative-portfolio-theme/exampleSite/* ../
+$ cd ..
+$ hugo server
+</code></pre>
+
+<h5 id="4-hugo已经开启了一个本地server打开-http-127-0-0-1-1313-http-127-0-0-1-1313-就可以在本地看到hugo生成的静态站点了">4、hugo已经开启了一个本地server打开<a href="http://127.0.0.1:1313">http://127.0.0.1:1313</a>就可以在本地看到hugo生成的静态站点了</h5>
+
+<p><img src="http://oxp6uindp.bkt.clouddn.com/blog/blog171125-2.png" style="width: 100%;"/></p>
+
+<h5 id="5-删除hugo生成的项目里的-public-文件夹-把-username-github-io-项目clone到这个hugo项目中命名为public-作为这个项目的子模块-public-文件夹就是hugo生成整个静态网站">5、删除hugo生成的项目里的<code>public</code>文件夹，把<code>username.github.io</code>项目clone到这个hugo项目中命名为public，作为这个项目的子模块（<code>public</code>文件夹就是hugo生成整个静态网站）</h5>
+
+<pre><code class="language-console">$ rm -rf public
+$ git clone https://github.com/username/username.github.io.git public
+</code></pre>
+
+<h5 id="6-回到hugo项目的根目录运行命令生成静态站点-把静态站点push到-username-github-io">6、回到hugo项目的根目录运行命令生成静态站点，把静态站点push到<code>username.github.io</code></h5>
+
+<pre><code class="language-console">$ hugo
+$ cd public
+$ git add .
+$ git commit -m&quot;Used Hugo create Blog&quot;
+$ git push -u origin master
+</code></pre>
+
+<p>大功告成，再次访问<code>http://username.github.io</code>,就可以看到你的Github Page博客了（一样的，可能会有1~15分钟的延迟）</p>
+
+<h3 id="最后">最后</h3>
+
+<hr />
+
+<h5 id="那我们怎么开始写blog呢">那我们怎么开始写blog呢？</h5>
+
+<p>已有的文章内容是这个主题的示例在<code>content</code>文件夹里，你可以全部删掉或修改在<code>content</code>文件夹里（About和Contact也一样）</p>
+
+<h5 id="修改或者新发布文章怎么操作">修改或者新发布文章怎么操作？</h5>
+
+<p>在<code>content/portfolio</code> 里修改或新增对应的markdown文章，然后是hugo命令生成静态站点文件在<code>public</code>文件里，再进入<code>public</code>文件夹使用git push修改到<code>username.github.io</code>仓库就OK了</p>
+
+<h5 id="上面的这个过程还是有点麻烦-所以我写了对应的bash脚本来完成这个操作-保存到hugo项目的根目录为deploy-sh-每次修改或新增文章后运行一下脚本就ok了-bash-deploy-sh-脚本内容如下">上面的这个过程还是有点麻烦，所以我写了对应的bash脚本来完成这个操作，保存到hugo项目的根目录为deploy.sh，每次修改或新增文章后运行一下脚本就OK了<code>$ bash deploy.sh</code>，脚本内容如下</h5>
+
+<pre><code class="language-console">hugo \
+&amp;&amp; cd public \
+&amp;&amp; git add . \
+&amp;&amp; git commit -m&quot;update `date &quot;+DATE: %Y-%m-%d TIME: %H:%M&quot;`&quot; \
+&amp;&amp; git push
+</code></pre>
+
+<p><br/></p>
+
+<h3 id="最最最后再提醒下">最最最后再提醒下</h3>
+
+<hr />
+
+<ol>
+<li>每次修改文章后建议先在本地运行<code>$ hugo server</code>看看blog运行是够正常，再push</li>
+<li>Github Page 还有很多细节比如自定义域名等，请看相关文档 <a href="https://github.io">https://github.io</a></li>
+<li>Hugo 也还有很多细节，请看相关文档<a href="https://gohugo.io/">https://gohugo.io/</a></li>
+<li>主页的菜单、联系方式等配置都可以在根目录的<code>_config.toml</code>中修改</li>
+<li>想要自定义主题样式怎么办？当然是看hugo的文档啦!这还用问我~</li>
+<li>谢谢~</li>
+</ol>
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+      </div>
+  </div>
+  <script src="https://chongxx.github.io/js/jquery.min.js"></script>
+<script src="https://chongxx.github.io/js/bootstrap.min.js"></script>
+<script src="https://chongxx.github.io/js/jquery.cookie.js"> </script>
+<script src="https://chongxx.github.io/js/ekko-lightbox.js"></script>
+<script src="https://chongxx.github.io/js/jquery.scrollTo.min.js"></script>
+<script src="https://chongxx.github.io/js/masonry.pkgd.min.js"></script>
+<script src="https://chongxx.github.io/js/imagesloaded.pkgd.min.js"></script>
+<script src="https://chongxx.github.io/js/owl.carousel.min.js"></script>
+<script src="https://chongxx.github.io/js/front.js"></script>
+
+</body>
+</html>
