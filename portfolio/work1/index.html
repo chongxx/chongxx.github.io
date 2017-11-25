@@ -161,7 +161,7 @@ $ hugo server
 
 <h5 id="4-hugo已经开启了一个本地server打开-http-127-0-0-1-1313-http-127-0-0-1-1313-就可以在本地看到hugo生成的静态站点了">4、hugo已经开启了一个本地server打开<a href="http://127.0.0.1:1313">http://127.0.0.1:1313</a>就可以在本地看到hugo生成的静态站点了</h5>
 
-<p><img src="http://oxp6uindp.bkt.clouddn.com/blog/blog171125-2.png" styl="width: 100%;"/></p>
+<p><img src="http://oxp6uindp.bkt.clouddn.com/blog/blog171125-2.png" style="width: 100%;"/></p>
 
 <h5 id="5-删除hugo生成的项目里的-public-文件夹-把-username-github-io-项目clone到这个hugo项目中命名为public-作为这个项目的子模块-public-文件夹就是hugo生成整个静态网站">5、删除hugo生成的项目里的<code>public</code>文件夹，把<code>username.github.io</code>项目clone到这个hugo项目中命名为public，作为这个项目的子模块（<code>public</code>文件夹就是hugo生成整个静态网站）</h5>
 
@@ -186,13 +186,13 @@ $ git push -u origin master
 
 <h5 id="那我们怎么开始写blog呢">那我们怎么开始写blog呢？</h5>
 
-<p>已有的文章内容是这个主题的示例，你可以全部删掉或修改在<code>content</code>文件里（About和Contact也一样）</p>
+<p>已有的文章内容是这个主题的示例在<code>content</code>文件夹里，你可以全部删掉或修改在<code>content</code>文件夹里（About和Contact也一样）</p>
 
 <h5 id="修改或者新发布文章怎么操作">修改或者新发布文章怎么操作？</h5>
 
-<p>在<code>content/portfolio</code> 里修改或新增对应的markdown文章，然后是用hugo命令生成静态站点文件在<code>public</code>文件里，再进入<code>public</code>文件夹使用git push修改到<code>username.github.io</code>仓库就OK了</p>
+<p>在<code>content/portfolio</code> 里修改或新增对应的markdown文章，然后是hugo命令生成静态站点文件在<code>public</code>文件里，再进入<code>public</code>文件夹使用git push修改到<code>username.github.io</code>仓库就OK了</p>
 
-<h5 id="上面的这个过程还是有点麻烦-所以我写了对应的bash脚本来完成这个操作-每次修改或新增文章后运行一下脚本就ok了-脚本如下-保存到hugo项目的">上面的这个过程还是有点麻烦，所以我写了对应的bash脚本来完成这个操作，每次修改或新增文章后运行一下脚本就OK了，脚本如下，保存到hugo项目的</h5>
+<h5 id="上面的这个过程还是有点麻烦-所以我写了对应的bash脚本来完成这个操作-保存到hugo项目的根目录为deploy-sh-每次修改或新增文章后运行一下脚本就ok了-bash-deploy-sh-脚本内容如下">上面的这个过程还是有点麻烦，所以我写了对应的bash脚本来完成这个操作，保存到hugo项目的根目录为deploy.sh，每次修改或新增文章后运行一下脚本就OK了<code>$ bash deploy.sh</code>，脚本内容如下</h5>
 
 <pre><code class="language-console">hugo \
 &amp;&amp; cd public \
@@ -200,6 +200,21 @@ $ git push -u origin master
 &amp;&amp; git commit -m&quot;update `date &quot;+DATE: %Y-%m-%d TIME: %H:%M&quot;`&quot; \
 &amp;&amp; git push
 </code></pre>
+
+<p><br/></p>
+
+<h3 id="最最最后再提醒下">最最最后再提醒下</h3>
+
+<hr />
+
+<ol>
+<li>每次修改文章后建议先在本地运行<code>$ hugo server</code>看看blog运行是够正常，再push</li>
+<li>Github Page 还有很多细节比如自定义域名等，请看相关文档 <a href="https://github.io">https://github.io</a></li>
+<li>Hugo 也还有很多细节，请看相关文档<a href="https://gohugo.io/">https://gohugo.io/</a></li>
+<li>主页的菜单、联系方式等配置都可以在根目录的<code>_config.toml</code>中修改</li>
+<li>想要自定义主题样式怎么办？当然是看hugo的文档啦!这还用问我~</li>
+<li>谢谢~</li>
+</ol>
          
       </div>
     </div>
