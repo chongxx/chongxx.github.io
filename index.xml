@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Chongxx of blog</title>
+    <title>Chong&#39;s blog</title>
     <link>https://chongxx.github.io/</link>
-    <description>Recent content on Chongxx of blog</description>
+    <description>Recent content on Chong&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy;2017 ❤</copyright>
@@ -28,7 +28,9 @@
       <pubDate>Wed, 05 Nov 2014 18:25:22 +0530</pubDate>
       
       <guid>https://chongxx.github.io/portfolio/work1/</guid>
-      <description>&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+      <description>&lt;p&gt;&lt;strong&gt;时间：2017-11-25 晚&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life. One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
 &lt;/p&gt;</description>
     </item>
     
